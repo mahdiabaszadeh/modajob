@@ -1,2 +1,17 @@
-@use "global";
-@use "hero";
+// If you want to override variables do it here
+@import "variables";
+
+// Some temp fixes
+@import "fixes";
+
+// If you want to add something do it here
+@import "custom";
+
+// Import CoreUI styles
+@import "~@coreui/coreui/scss/coreui.scss";
+
+@import "homePage";
+
+@import "../fonts/stylesheet.css";
+@import "../../components/Hybrids/Login/login";
+
