@@ -1,12 +1,13 @@
 const path = require("path");
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+
 let mode = "development";
 let target = "web";
 
-const plugins=[
+const plugins = [
   new CleanWebpackPlugin(),
   new MiniCssExtractPlugin(),
   new HtmlWebpackPlugin({
@@ -18,8 +19,8 @@ if (process.env.NODE_ENV === "production") {
   mode = "production";
   target = "browserslist";
 }
-if(process.env.SERVE){
-  plugins.push(new ReactRefreshWebpackPlugin({overlay: false,}));
+if (process.env.SERVE) {
+  plugins.push(new ReactRefreshWebpackPlugin({ overlay: false }));
 }
 
 module.exports = {
@@ -61,6 +62,11 @@ module.exports = {
 
   resolve: {
     extensions: [".js", ".jsx"],
+    alias: {
+      "@Components": path.resolve(__dirname, "src/components/"),
+      "@Utilities": path.resolve(__dirname, "src/utilities/"),
+      "@Assets": path.resolve(__dirname, "src/assets/"),
+    },
   },
 
   devtool: "source-map",

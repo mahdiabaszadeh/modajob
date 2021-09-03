@@ -1,0 +1,14 @@
+.navbar{
+  font-size: 0.944rem;
+  a{
+    color: #252525!important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .navbar {
+    background-color: #e9e0f6;
+    line-height: 27px;
+    border-radius: 4px;
+    padding: 10px;
+  }
+}
