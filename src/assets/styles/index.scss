@@ -1,3 +1,10 @@
+@import 'https://cdn.rtlcss.com/bootstrap/v4.5.3/css/bootstrap.min.css';
+
+@import "~bootstrap/scss/bootstrap";
+
+// @import "~@coreui/coreui/scss/coreui.scss";
+
+
 // If you want to override variables do it here
 @import "variables";
 
@@ -5,13 +12,8 @@
 @import "fixes";
 
 // If you want to add something do it here
-@import "custom";
-
-// Import CoreUI styles
-@import "~@coreui/coreui/scss/coreui.scss";
-
-@import "homePage";
-
 @import "../fonts/stylesheet.css";
-@import "../../components/Hybrids/Login/login";
+@import "custom";
+@import "homePage";
+@import "../../views/Login/login.scss";
 

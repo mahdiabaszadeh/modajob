@@ -1,3 +1,7 @@
+/** @format */
+
+require("dotenv").config({ path: "./.env" });
+const webpack = require("webpack");
 const path = require("path");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -12,6 +16,9 @@ const plugins = [
   new MiniCssExtractPlugin(),
   new HtmlWebpackPlugin({
     template: "src/index.html",
+  }),
+  new webpack.DefinePlugin({
+    "process.env": JSON.stringify(process.env),
   }),
 ];
 
@@ -30,6 +37,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "image/[hash][ext][query]",
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   module: {
     rules: [

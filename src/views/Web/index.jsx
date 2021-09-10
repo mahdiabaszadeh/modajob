@@ -7,9 +7,7 @@ const HomePage = (props) => {
   const { children } = props;
   return (
     <>
-      <DefaultLayout fullwidth={true}>
-          <Main />
-      </DefaultLayout>
+      <Main />
     </>
   );
 };

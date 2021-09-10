@@ -9,13 +9,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./views/App";
-import { icons } from "./assets/icons/icons";
 import { Provider } from "react-redux";
 import stories from "./store/index";
 import { ThemeProvider } from "react-bootstrap";
 
+import "./assets/styles/index.scss";
+
 const store = stories;
-React.icons = icons;
 
 ReactDOM.render(
   <Provider store={store}>

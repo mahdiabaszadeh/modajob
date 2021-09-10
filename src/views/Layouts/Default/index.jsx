@@ -4,18 +4,18 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import styles from "./index.module.scss";
-import { CCol, CRow } from "@coreui/react";
+import { Col } from "react-bootstrap";
 
 const DefaultLayout = ({ children, fullwidth }) => (
   <div className={styles["main-container"]}>
     <Header />
-    <CCol>
+    <Col>
       {fullwidth === true ? (
         <div>{children}</div>
       ) : (
-        <CCol md={{ span: 10, offset: 1 }}>{children}</CCol>
+        <Col md={{ span: 10, offset: 1 }}>{children}</Col>
       )}
-    </CCol>
+    </Col>
     <Footer />
   </div>
 );

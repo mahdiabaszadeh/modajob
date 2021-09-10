@@ -1,0 +1,10 @@
+export const MACRO = "macro";
+export const SETTINGS = "settings";
+export const CURRENT_USER = "currentUser";
+export const PAGE_SETTING = "pageSetting";
+export const GRID_SETTING = "gridSetting";
+export const TEXTAREA_HEIGHT = "textareaHeight";
+export const COMPONENTS_SETTING = "componentsSetting";
+export const SERVER_TRANSLATIONS = "serverTranslations";
+export const LOCAL_STORAGE_VERSION = "local-storage-version";
+export const HIDE_IMAGE = "hideImage";
